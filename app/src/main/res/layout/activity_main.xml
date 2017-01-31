@@ -78,13 +78,30 @@
             style="@style/QuestionText"
             android:text="@string/question_4"/>
 
-        <CheckBox
-            android:id="@+id/inhabitants"
+        <RadioGroup
+            android:id="@+id/inhabitants_radio_group"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/true_text"
+            android:layout_height="match_parent"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginTop="4dp">
+            <RadioButton
+                android:id="@+id/inhabitants_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/millions_140"/>
+
+            <RadioButton
+                android:id="@+id/inhabitants_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/millions_190"/>
+
+            <RadioButton
+                android:id="@+id/inhabitants_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/millions_210" />
+        </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"

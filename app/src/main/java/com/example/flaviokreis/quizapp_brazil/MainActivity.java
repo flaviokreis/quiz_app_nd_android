@@ -7,6 +7,8 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -24,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.biggest_state)
     EditText biggestState;
 
-    @BindView(R.id.inhabitants)
-    CheckBox inhabitants;
+    @BindView(R.id.inhabitants_radio_group)
+    RadioGroup inhabitantsRadioGroup;
 
     @BindView(R.id.city_1)
     CheckBox city1;
@@ -49,31 +51,31 @@ public class MainActivity extends AppCompatActivity {
     public void verify(){
         int correctlyAnswers = 0;
 
-        if(firstCapital.getText().toString().toLowerCase().equals(getString(R.string.salvador))){
-            correctlyAnswers += 1;
+        if(firstCapital.getText().toString().equalsIgnoreCase(getString(R.string.salvador))){
+            correctlyAnswers++;
         }
 
         if(capitalRadioGroup.getCheckedRadioButtonId() == R.id.question_2_brasilia){
-            correctlyAnswers += 1;
+            correctlyAnswers++;
         }
 
-        if(biggestState.getText().toString().equals(getString(R.string.amazonas))){
-            correctlyAnswers += 1;
+        if(biggestState.getText().toString().equalsIgnoreCase(getString(R.string.amazonas))){
+            correctlyAnswers++;
         }
 
-        if(!inhabitants.isChecked()){
-            correctlyAnswers += 1;
+        if(inhabitantsRadioGroup.getCheckedRadioButtonId() == R.id.inhabitants_2){
+            correctlyAnswers++;
         }
 
         if(city1.isChecked() && !city2.isChecked() && !city3.isChecked() && city4.isChecked() ){
-            correctlyAnswers += 1;
+            correctlyAnswers++;
         }
 
         if( correctlyAnswers == TOTAL_OF_QUESTION ){
             Toast.makeText(this, R.string.toast_ok, Toast.LENGTH_LONG).show();
         }
         else {
-            Toast.makeText(this, String.format("Sorry, you are correctly in %d to %d question", correctlyAnswers, TOTAL_OF_QUESTION), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, String.format(Locale.getDefault(), getString(R.string.incorrecty_answer_toast), correctlyAnswers, TOTAL_OF_QUESTION), Toast.LENGTH_LONG).show();
         }
     }
 }
