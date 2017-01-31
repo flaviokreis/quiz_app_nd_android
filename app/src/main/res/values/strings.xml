@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Quiz App - Brazil</string>
+    <string name="question_1">1. What was the first capital of Brazil?</string>
+    <string name="question_2">2. What is the capital of Brasil?</string>
+    <string name="question_3">3. What is the biggest state in Brazil?</string>
+    <string name="question_4">4. True or false: Brazil have approximately 150 million of inhabitants.</string>
+    <string name="question_5">5. Select only the cities is from Brazil</string>
+    <string name="your_answer">your answer</string>
+    <string name="rio_de_janeiro">Rio de Janeiro</string>
+    <string name="sao_paulo">São Paulo</string>
+    <string name="brasilia">Brasília</string>
+    <string name="belo_horizonte">Belo Horizonte</string>
+    <string name="santiago">Santiago</string>
+    <string name="caracas">Caracas</string>
+    <string name="aracaju">Aracaju</string>
+    <string name="verify">Verify</string>
+    <string name="true_text">True</string>
+    <string name="salvador">salvador</string>
+    <string name="amazonas">amazonas</string>
+    <string name="toast_ok">Congratulations, all your answers is correctly!</string>
+</resources>
